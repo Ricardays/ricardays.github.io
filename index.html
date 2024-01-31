@@ -1,0 +1,68 @@
+<div class="contenedor">
+    <div class="caja">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+        <div class="c5"></div>
+        <div class="c6"></div>
+    </div>
+    <audio src="music.ogg" autoplay>
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+</div>
+
+<style>
+    .caja{
+        width: 420px;
+        height: 420px;
+        transform-style: preserve-3d;
+        animation: girar 2s linear infinite;
+    }
+
+    .caja > div{
+        position: absolute;
+        width: 420px;
+        height: 420px;
+        /* background-color: red; */
+        background-image: url("fat_yoshi_2.png");
+        border: solid 5px black;
+    }
+
+    .contenedor{
+        padding-top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .c1 {
+        transform: translateZ(210px);
+    }
+
+    .c2 {
+        transform: rotateY(90deg) translateZ(210px);
+    }
+
+    .c3 {
+        transform: rotateY(180deg) translateZ(210px);
+    }
+
+    .c4 {
+        transform: rotateX(90deg) translateZ(210px);
+    }
+
+    .c5 {
+        transform: rotateY(-90deg) translateZ(210px);
+    }
+
+    .c6 {
+        transform: rotateX(-90deg) translateZ(210px) rotate(180deg);
+    }
+
+    @keyframes girar{
+        100% {
+            transform: rotateX(0deg) rotateY(360deg) rotateZ(360deg);
+        }
+    }
+</style>
